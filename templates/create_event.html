@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Event</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Create Event</h1>
+    <nav>
+        <a href="/">Home</a> | &nbsp;
+        <a href="/events">View Events</a>
+    </nav>
+    <form method="POST">
+        <label>Title: <input type="text" name="title" required></label><br>
+        <label>Description: <input type="text" name="description" required></label><br>
+        <label>Start Time: <input type="text" name="start_time" placeholder="YYYY-MM-DD HH:MM" required></label><br>
+        <label>End Time: <input type="text" name="end_time" placeholder="YYYY-MM-DD HH:MM" required></label><br>
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>

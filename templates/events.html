@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Events</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>All Events</h1>
+    <nav>
+        <a href="/">Home</a> | &nbsp;
+        <a href="/create">Create Event</a>
+    </nav>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Actions</th>
+        </tr>
+        {% for event in events %}
+        <tr>
+            <td>{{ event.title }}</td>
+            <td>{{ event.description }}</td>
+            <td>{{ event.start_time }}</td>
+            <td>{{ event.end_time }}</td>
+            <td>
+                <a href="/update/{{ event.id }}">Edit</a> |
+                <a href="/delete/{{ event.id }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

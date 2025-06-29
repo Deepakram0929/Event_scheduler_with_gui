@@ -1,0 +1,34 @@
+{
+  "info": {
+    "name": "Event Scheduler API",
+    "_postman_id": "12345678-1234-5678-1234-567812345678",
+    "description": "Event Scheduler API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Event",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Meeting\",\n    \"description\": \"Team sync\",\n    \"start_time\": \"2025-06-30 10:00\",\n    \"end_time\": \"2025-06-30 11:00\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/events",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["events"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

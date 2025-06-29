@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Event</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Update Event</h1>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/events">View Events</a>
+    </nav>
+    <form method="POST">
+        <label>Title: <input type="text" name="title" value="{{ event.title }}" required></label><br>
+        <label>Description: <input type="text" name="description" value="{{ event.description }}" required></label><br>
+        <label>Start Time: <input type="text" name="start_time" value="{{ event.start_time }}" required></label><br>
+        <label>End Time: <input type="text" name="end_time" value="{{ event.end_time }}" required></label><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
